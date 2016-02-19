@@ -4,7 +4,7 @@ development:
   database: ntpumis_be
   host: localhost
   username: root
-  password: root
+  password: ntpumis2015
 
 test:
   adapter: mysql2
@@ -12,12 +12,12 @@ test:
   database: ntpumis_development
   host: localhost
   username: root
-  password: root
+  password: ntpumis2015
 
 production:
   adapter: mysql2
   encoding: utf8
   database: ntpumis_be
   host: localhost
-  username: root
-  password: root
+  username: ntpumis
+  password: ntpumis2015
