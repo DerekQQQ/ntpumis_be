@@ -73,7 +73,8 @@ class TeachersController < ApplicationController
               :tel => teacher.tel,
               :extension => teacher.extension,
               :employ_type => teacher.employ_type,
-              :image_url => teacher.image_url
+              :image_url => teacher.image_url,
+              :website => teacher.website
             }
           )
       else
@@ -91,8 +92,8 @@ class TeachersController < ApplicationController
               :tel => teacher.tel,
               :extension => teacher.extension,
               :employ_type => teacher.employ_type,
-              :image_url => teacher.image_url
-
+              :image_url => teacher.image_url,
+              :website => teacher.website
             }
           )
       end
@@ -123,6 +124,7 @@ class TeachersController < ApplicationController
       teacher.extension = data['extension']
       teacher.employ_type = data['employ_type']
       teacher.image_url = data['image_url']
+      teacher.website = data['website']
 
       teacher.save!
     end
@@ -162,6 +164,7 @@ class TeachersController < ApplicationController
       teacher.extension = data['extension']
       teacher.employ_type = data['employ_type']
       teacher.image_url = data['image_url']
+      teacher.website = data['website']
       teacher.save!
 
       render :json =>{
@@ -188,7 +191,7 @@ class TeachersController < ApplicationController
   end
   private
   def teacher_params
-    params.require(:teacher).permit(:name_c, :name_e, :office_c, :office_e, :domain_c, :domain_e, :degree_c, :degree_e, :title_priority, :is_chair, :email, :tel, :extension ,:employ_type, :image_url,:isShow)
+    params.require(:teacher).permit(:name_c, :name_e, :office_c, :office_e, :domain_c, :domain_e, :degree_c, :degree_e, :title_priority, :is_chair, :email, :tel, :extension ,:employ_type, :image_url, :website, :isShow)
   end
 
 end

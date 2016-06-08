@@ -16,6 +16,7 @@
       <tr><td>專業領域（英文）</td><td><%= simple_format(@teacher.domain_e) %></td></tr>
       <tr><td>職稱</td><td><%= @title_array_c[@teacher.title_priority] %></td></tr>
       <tr><td>圖片連結</td><td><a href ="<%= @teacher.image_url %>"><%= @teacher.image_url %></td></tr></a>
+      <tr><td>個人網站</td><td><a href ="<%= @teacher.website %>"><%= @teacher.website %></td></tr></a>
       <tr><td>Email</td><td><%= @teacher.email %></td></tr>
       <tr><td>電話</td><td><%= @teacher.tel %>#<%= @teacher.extension%></td></tr>
       <tr><td>任職所長</td><td><%=  @teacher.is_chair == true ? '是' : '否' %></td></tr>
